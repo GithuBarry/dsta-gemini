@@ -8,6 +8,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 from .dataset import TwitterDataset, Annotation
 from .gemini_client import GeminiLabeler
 from .label_normalization import convert_label_tuple, Stance
+from .logging_utils import log_request
 
 
 @dataclass
@@ -23,6 +24,7 @@ class EvalResult:
     overall_report: Dict[str, Any]
     confusion_by_topic: Dict[str, Any]
     cost_estimate: Dict[str, Any]
+    image_stats: Dict[str, int]
 
 
 def evaluate_annotations(
@@ -39,17 +41,17 @@ def evaluate_annotations(
 
     counted_calls = 0
 
+    images_requested = 0
+    images_used = 0
+    images_missing = 0
+
     for idx, ann in enumerate(annotations):
         if max_examples is not None and idx >= max_examples:
             break
         tw = dataset.get_tweet(ann.tweet_id)
 
-        # Warn and skip missing text
         if tw.text is None or str(tw.text).strip() == "":
             continue
-
-        # If images are referenced but none available, we proceed with text-only, but this is logged inherently by the pipeline caller
-        # because the prompt is text-only. We only warn via output aggregation later if needed.
 
         # Normalize ground truth
         canon_topic, canon_stance, _ = convert_label_tuple(
@@ -58,13 +60,24 @@ def evaluate_annotations(
             raw_target=ann.stance_target,
         )
         if canon_topic is None or canon_stance is None:
-            # skip examples with ambiguous normalization
             continue
 
+        # Try to include the annotated image where available
+        image_bytes = None
+        if ann.image_index is not None and ann.image_index >= 0:
+            images_requested += 1
+            image_bytes = dataset.get_local_image_bytes(ann.tweet_id, ann.image_index)
+            if image_bytes is not None:
+                images_used += 1
+                log_request(ann.tweet_id, "including_image", {"image_index": int(ann.image_index)})
+            else:
+                images_missing += 1
+                log_request(ann.tweet_id, "missing_image_skipped", {"image_index": int(ann.image_index)})
+
         # Predict with Gemini
-        preds = model.label(tweet_id=ann.tweet_id, text=tw.text)
+        preds = model.label(tweet_id=ann.tweet_id, text=tw.text, image_bytes=image_bytes)
         counted_calls += 1 if preds else 0
-        # Find the first prediction with a recognized topic, else map to Unrelated
+
         pred_topic = "Unrelated"
         pred_stance = "Unrelated"
         for p in preds:
@@ -86,7 +99,6 @@ def evaluate_annotations(
         y_true.append((canon_topic, canon_stance))
         y_pred.append((pred_topic, pred_stance))
 
-    # Build per-topic metrics for stance where topic matches; and topic classification separately
     df = pd.DataFrame(
         {
             "true_topic": [t for t, _ in y_true],
@@ -101,9 +113,7 @@ def evaluate_annotations(
 
     for topic in sorted(df.true_topic.unique()):
         df_topic = df[df.true_topic == topic]
-        # Topic accuracy within this subset
         topic_acc = float((df_topic.pred_topic == df_topic.true_topic).mean())
-        # Stance report only where topic matched
         matched = df_topic[df_topic.pred_topic == df_topic.true_topic]
         if len(matched) > 0:
             stance_report = classification_report(
@@ -126,10 +136,8 @@ def evaluate_annotations(
         }
         confusion_by_topic[topic] = {"labels": ["Pro", "Against", "Neutral"], "matrix": cm}
 
-    # Overall topic accuracy
     overall_topic_acc = float((df.pred_topic == df.true_topic).mean()) if len(df) else 0.0
 
-    # Overall stance report where topic matched
     matched_all = df[df.pred_topic == df.true_topic]
     if len(matched_all) > 0:
         overall_stance_report = classification_report(
@@ -145,10 +153,8 @@ def evaluate_annotations(
         "num_matched_topic": int(len(matched_all)),
     }
 
-    # Cost estimation (simple heuristic): assume 1K tokens per example average in+out combined for large-context runs
-    # Adjust easily later as needed or from model usage logs if exposed.
     tokens_per_example = 1000
-    price_per_million_tokens = 0.03  # placeholder; adjust if exact price available
+    price_per_million_tokens = 0.03
     total_tokens = tokens_per_example * counted_calls
     cost_usd = total_tokens / 1_000_000 * price_per_million_tokens
 
@@ -160,9 +166,16 @@ def evaluate_annotations(
         "estimated_cost_usd": cost_usd,
     }
 
+    image_stats = {
+        "images_requested": images_requested,
+        "images_used": images_used,
+        "images_missing": images_missing,
+    }
+
     return EvalResult(
         per_topic_reports=reports_by_topic,
         overall_report=overall_report,
         confusion_by_topic=confusion_by_topic,
         cost_estimate=cost_estimate,
+        image_stats=image_stats,
     )
