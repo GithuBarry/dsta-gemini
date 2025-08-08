@@ -62,6 +62,28 @@ class TwitterDataset:
         image_urls = self.image_map.get(str(tweet_id), [])
         return Tweet(tweet_id=str(tweet_id), text=text, image_urls=image_urls)
 
+    def get_local_image_paths(self, tweet_id: str) -> List[str]:
+        base_dir = os.path.join(Paths.raw_data, "images", str(tweet_id))
+        if not os.path.isdir(base_dir):
+            return []
+        files = [
+            os.path.join(base_dir, name)
+            for name in sorted(os.listdir(base_dir))
+            if os.path.isfile(os.path.join(base_dir, name))
+        ]
+        return files
+
+    def get_local_image_bytes(self, tweet_id: str, index: int) -> Optional[bytes]:
+        paths = self.get_local_image_paths(tweet_id)
+        if index < 0 or index >= len(paths):
+            return None
+        path = paths[index]
+        try:
+            with open(path, "rb") as f:
+                return f.read()
+        except Exception:
+            return None
+
 
 @dataclass
 class Annotation:

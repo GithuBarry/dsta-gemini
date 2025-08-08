@@ -19,7 +19,7 @@ class GeminiLabeler:
         self.model = self.config.model
         self.cache = JsonlCache(cache_name)
 
-    def _build_prompt(self, example_image_b64: Optional[str], example_text: Optional[str], input_text: str) -> List[types.Content]:
+    def _build_prompt(self, example_image_b64: Optional[str], example_text: Optional[str], input_text: str, image_bytes: Optional[bytes] = None) -> List[types.Content]:
         example_parts: List[types.Part] = []
         if example_image_b64 is not None:
             example_parts.append(
@@ -57,9 +57,17 @@ class GeminiLabeler:
                     ],
                 )
             )
-        contents.append(
-            types.Content(role="user", parts=[types.Part.from_text(text=input_text)])
-        )
+        # Build user parts with optional image
+        user_parts: List[types.Part] = []
+        if image_bytes is not None:
+            user_parts.append(
+                types.Part.from_bytes(
+                    mime_type="image/jpeg",
+                    data=image_bytes,
+                )
+            )
+        user_parts.append(types.Part.from_text(text=input_text))
+        contents.append(types.Content(role="user", parts=user_parts))
         return contents
 
     def _build_config(self) -> types.GenerateContentConfig:
@@ -128,10 +136,11 @@ class GeminiLabeler:
         )
         return cfg
 
-    def label(self, *, tweet_id: str, text: str) -> List[Dict[str, Any]]:
+    def label(self, *, tweet_id: str, text: str, image_bytes: Optional[bytes] = None) -> List[Dict[str, Any]]:
         input_payload = {
             "tweet_id": tweet_id,
             "text": text,
+            "has_image": bool(image_bytes),
             "model": self.model,
         }
         cache_key = self.cache.make_key(input_payload)
@@ -140,7 +149,7 @@ class GeminiLabeler:
             log_response(tweet_id, "cache_return", cached)
             return cached["response"]
 
-        contents = self._build_prompt(None, None, text)
+        contents = self._build_prompt(None, None, text, image_bytes=image_bytes)
         config = self._build_config()
 
         log_request(tweet_id, "gemini.generate_content_stream", {"contents_len": len(contents)})
