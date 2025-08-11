@@ -1,0 +1,799 @@
+{
+  "analysis_date": "2025-01-11",
+  "dataset_summary": {
+    "total_annotations": 65216,
+    "unique_tweets": 13499,
+    "annotation_files": 66
+  },
+  "conflict_summary": {
+    "total_groups_analyzed": 14808,
+    "groups_with_conflicts": 48,
+    "total_conflicting_annotations": 513,
+    "conflicts_by_topic": {
+      "Russian Ukrainian Conflict": 7,
+      "Taiwan Question": 41
+    },
+    "conflicts_by_stance_pair": {
+      "('Neutral', 'Pro')": 28,
+      "('Against', 'Pro')": 8,
+      "('Against', 'Neutral')": 12
+    },
+    "severe_conflicts": []
+  },
+  "detailed_conflicts": [
+    {
+      "tweet_id": "1605985524170125313",
+      "topic": "Russian Ukrainian Conflict",
+      "target": "UKR",
+      "stance_distribution": {
+        "Pro": 3,
+        "Neutral": 3
+      },
+      "source_files": [
+        "Multi-modal-Russo-Ukrainian-Conflict_in-target_UKR_train.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_UKR_test.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_RUS_train.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1500197440443629573",
+      "topic": "Russian Ukrainian Conflict",
+      "target": "UKR",
+      "stance_distribution": {
+        "Pro": 9,
+        "Against": 3
+      },
+      "source_files": [
+        "Multi-modal-Russo-Ukrainian-Conflict_in-target_UKR_train.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_RUS_valid.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_UKR_test.csv"
+      ],
+      "total_annotations": 12,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1497523008474431488",
+      "topic": "Russian Ukrainian Conflict",
+      "target": "UKR",
+      "stance_distribution": {
+        "Neutral": 9,
+        "Pro": 3
+      },
+      "source_files": [
+        "Multi-modal-Russo-Ukrainian-Conflict_in-target_UKR_train.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_UKR_test.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_RUS_train.csv"
+      ],
+      "total_annotations": 12,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1643988089629720577",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 9,
+        "Neutral": 9
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 18,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1505431527156772868",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 6,
+        "Neutral": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 9,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1486205481102483459",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Neutral": 3,
+        "Pro": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1665275671067721730",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 12,
+        "Against": 6
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 18,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1660510556087005184",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 3,
+        "Neutral": 9
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_in-target_TOC_test.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_valid.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 12,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1566979647434551298",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 3,
+        "Neutral": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_test.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1522552159065489409",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 9,
+        "Neutral": 9
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_valid.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 18,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1666030644760305664",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Neutral": 6,
+        "Pro": 12
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_in-target_TOC_test.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_valid.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 18,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1643501396610912257",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Neutral": 6,
+        "Pro": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_valid.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 9,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1661474930108813314",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 18,
+        "Neutral": 9
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 27,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1635752664234602497",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 6,
+        "Neutral": 6
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_in-target_TOC_test.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_valid.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 12,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1664574245454725124",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Neutral": 9,
+        "Pro": 6
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_test.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 15,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1620040506758545409",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 3,
+        "Against": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1660185793472913410",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 6,
+        "Neutral": 6
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 12,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1542740170273075200",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Neutral": 3,
+        "Pro": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1649335127946809350",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 12,
+        "Neutral": 12
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 24,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1660490486988304384",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 12,
+        "Neutral": 12
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_in-target_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_valid.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 24,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1554809203126140928",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Neutral": 3,
+        "Pro": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_valid.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1555142617838792705",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Against": 3,
+        "Neutral": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_valid.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1629366696422289409",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 3,
+        "Neutral": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_test.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1483398967509409794",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Neutral": 3,
+        "Pro": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_valid.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1554408943216381952",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 3,
+        "Neutral": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1596349671848390657",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 3,
+        "Neutral": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1664206442260463616",
+      "topic": "Taiwan Question",
+      "target": "TOC",
+      "stance_distribution": {
+        "Pro": 3,
+        "Neutral": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1496882574194470912",
+      "topic": "Russian Ukrainian Conflict",
+      "target": "UKR",
+      "stance_distribution": {
+        "Pro": 9,
+        "Neutral": 3
+      },
+      "source_files": [
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_UKR_test.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_RUS_train.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_in-target_UKR_valid.csv"
+      ],
+      "total_annotations": 12,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1556810827436421121",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Neutral": 6,
+        "Pro": 9
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv"
+      ],
+      "total_annotations": 15,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1501859903530577926",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Against": 12,
+        "Neutral": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_in-target_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_valid.csv"
+      ],
+      "total_annotations": 15,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1632936005337780224",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Against": 3,
+        "Pro": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1566979647434551298",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Neutral": 3,
+        "Against": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1522552159065489409",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Against": 15,
+        "Pro": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv"
+      ],
+      "total_annotations": 18,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1646715122805768196",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Neutral": 6,
+        "Pro": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv"
+      ],
+      "total_annotations": 9,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1635752664234602497",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Against": 6,
+        "Neutral": 6
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv"
+      ],
+      "total_annotations": 12,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1562633301734858754",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Pro": 9,
+        "Neutral": 6
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_in-target_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_valid.csv"
+      ],
+      "total_annotations": 15,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1610496794705940481",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Against": 3,
+        "Neutral": 6
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv"
+      ],
+      "total_annotations": 9,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1574744075936595968",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Neutral": 3,
+        "Against": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1514634598172536835",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Against": 3,
+        "Neutral": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1627027530208223232",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Neutral": 3,
+        "Pro": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1592722902914195456",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Against": 3,
+        "Pro": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_in-target_MOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1664848215571673088",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Against": 6,
+        "Pro": 6
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_in-target_MOC_test.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_valid.csv"
+      ],
+      "total_annotations": 12,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1556170554159386625",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Against": 3,
+        "Pro": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_in-target_MOC_test.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_valid.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1524138560391102466",
+      "topic": "Russian Ukrainian Conflict",
+      "target": "RUS",
+      "stance_distribution": {
+        "Against": 3,
+        "Neutral": 3
+      },
+      "source_files": [
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_RUS_test.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_UKR_train.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_in-target_RUS_train.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1497291342157955079",
+      "topic": "Russian Ukrainian Conflict",
+      "target": "RUS",
+      "stance_distribution": {
+        "Neutral": 3,
+        "Against": 3
+      },
+      "source_files": [
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_RUS_test.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_UKR_train.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_in-target_RUS_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1539542264774541315",
+      "topic": "Russian Ukrainian Conflict",
+      "target": "RUS",
+      "stance_distribution": {
+        "Neutral": 3,
+        "Against": 3
+      },
+      "source_files": [
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_RUS_test.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_zero-shot_UKR_train.csv",
+        "Multi-modal-Russo-Ukrainian-Conflict_in-target_RUS_train.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1666030644760305664",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Neutral": 6,
+        "Against": 12
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv",
+        "Multi-modal-Taiwan-Question_in-target_MOC_test.csv"
+      ],
+      "total_annotations": 18,
+      "unique_stances": 2
+    },
+    {
+      "tweet_id": "1637964089115934721",
+      "topic": "Taiwan Question",
+      "target": "MOC",
+      "stance_distribution": {
+        "Against": 3,
+        "Neutral": 3
+      },
+      "source_files": [
+        "Multi-modal-Taiwan-Question_in-target_MOC_valid.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_TOC_train.csv",
+        "Multi-modal-Taiwan-Question_zero-shot_MOC_test.csv"
+      ],
+      "total_annotations": 6,
+      "unique_stances": 2
+    }
+  ],
+  "analysis_notes": [
+    "Conflicts occur when same tweet+topic+target has different stance labels",
+    "This indicates annotation inconsistency or genuine ambiguity",
+    "Severe conflicts (3+ stances) may indicate data quality issues",
+    "Consider majority voting or expert review for conflicted items"
+  ]
+}

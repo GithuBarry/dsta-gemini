@@ -1,0 +1,26 @@
+# Core dependencies
+google-genai>=0.3.0
+python-dotenv>=1.0.0
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Visualization and analysis
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# Machine learning evaluation
+scikit-learn>=1.0.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipykernel>=6.0.0
+nbformat>=5.0.0
+
+# Data processing
+Pillow>=9.0.0  # For image processing
+pathlib2>=2.3.0; python_version < '3.4'
+
+# Logging and utilities
+tqdm>=4.64.0  # For progress bars
+colorama>=0.4.0  # For colored terminal output

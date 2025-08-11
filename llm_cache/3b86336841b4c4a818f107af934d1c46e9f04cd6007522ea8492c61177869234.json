@@ -1,0 +1,21 @@
+{
+  "system_instruction": "# Tweet Stance Classification\n\nAnalyze the tweet and classify the stance toward each relevant topic's standardized target:\n\n1. **\"Russian Ukrainian Conflict\"** - Target: Russia's position in the Russian-Ukrainian conflict (Russia's justification for military actions against Ukraine)\n2. **\"US 2020 Election\"** - Target: Donald Trump as 2020 presidential candidate (Support for Donald Trump's 2020 presidential campaign)\n3. **\"Taiwan Question\"** - Target: Mainland China's claim that Taiwan is part of China (Mainland China's territorial claim over Taiwan)\n4. **\"False COVID Treatment\"** - Target: The claim that Chloroquine/Hydroxychloroquine being a valid COVID-19 treatment (Using chloroquine or hydroxychloroquine to treat COVID-19)\n\n## Stance Options\n- **Pro**: Supports/endorses the target\n- **Against**: Opposes/criticizes the target\n- **Neutral**: Mentions topic but no clear position\n- **Unrelated**: Tweet does not relate to any listed topics\n\n## Instructions\n- Return one classification result for each detected topic listed above\n- If the tweet relates to multiple listed topics, provide multiple results\n- If unrelated to all topics, return single result with topic \"Unrelated\" and provide 1-5 keywords describing what the tweet is about\n- Use exact topic names as listed above\n- Always use the standardized target for each topic as specified\n- Consider context, sarcasm, and implied meanings",
+  "thoughts": [
+    "**Initial Assessment and Stance Determination**\n\nAlright, let's break this down. My goal is to classify this tweet's stance on the predefined topics, focusing on the \"Russian Ukrainian Conflict.\" The tweet reads: \"Love that we’re doing the Cold War again except now our leaders are somehow more demented. [link]\" and includes a news headline about the Nord Stream pipelines, potential sabotage, and Russia's claim of a \"right\" to use nuclear weapons.\n\nThe headline's direct connection to Russia and the potential for nuclear escalation, coupled with the \"Cold War\" reference, immediately links this to the \"Russian Ukrainian Conflict.\" The target is \"Russia's justification for military actions against Ukraine.\"\n\nInitially, the tweet's sarcasm about a new Cold War and \"demented leaders\" seemed to be a more general critique of geopolitical tensions. However, after further analysis, it's clear the tweet expresses a strong negative emotion about the escalating situation, with Russia's actions being a key driver.  The linked article explicitly references Russia's nuclear weapon threats, and this, along with the tweet's tone, supports the idea that the situation is being criticized.\n\nWhile the tweet doesn't directly address Russia's *justification* for its military actions, it strongly implies disapproval of the dangerous path being taken. This includes the escalating tensions, the potential for nuclear use, and the overall negative state of affairs. The tweet implicitly criticizes Russia's aggressive posture and the dangerous geopolitical situation it contributes to.\n\nUltimately, I'm classifying the stance as \"Against.\" The tweet's sarcastic remark, along with the linked article discussing Russia's nuclear threats, supports the notion of negative sentiment about the conflict.\n"
+  ],
+  "result": [
+    {
+      "stance": "Against",
+      "topic": "Russian Ukrainian Conflict"
+    }
+  ],
+  "response_text": "[\n  {\n    \"stance\": \"Against\",\n    \"topic\": \"Russian Ukrainian Conflict\"\n  }\n]",
+  "cached_at": "2025-08-11T14:02:32.547590",
+  "input_text": "Love that we’re doing the Cold War again except now our leaders are somehow more demented. https://t.co/IIuzGFnpiE",
+  "image_paths": [
+    "twitter/data/images/1574955230919200768/image_0.jpg"
+  ],
+  "image_count": 1,
+  "tweet_id": "1574955230919200768",
+  "processing_time": 12.153500080108643
+}

@@ -1,0 +1,18 @@
+{
+  "result": [
+    {
+      "stance": "Against",
+      "topic": "Taiwan Question"
+    }
+  ],
+  "processing_time": 2.731718063354492,
+  "response_text": "[\n  {\n    \"stance\": \"Against\",\n    \"topic\": \"Taiwan Question\"\n  }\n]",
+  "cached_at": "2025-08-11T13:51:16.289000",
+  "input_text": "Rep. Gallagher: \"If we're going to talk about integrated deterrence, what we should integrate is the State Department moving heaven and earth to negotiate basing agreements with key allies so we can deploy teams of marines and soldiers in order to deny a PLA invasion of Taiwan.\" https://t.co/5QDyAA1UqL",
+  "image_paths": [
+    "twitter/data/images/1524869508799815681/image_0.jpg"
+  ],
+  "image_count": 1,
+  "tweet_id": "1524869508799815681",
+  "system_instruction": "# Tweet Stance Classification\n\nAnalyze the tweet and classify the stance toward each relevant topic's standardized target:\n\n1. **\"Russian Ukrainian Conflict\"** - Target: Russia's position in the Russian-Ukrainian conflict (Russia's justification for military actions against Ukraine)\n2. **\"US 2020 Election\"** - Target: Donald Trump as 2020 presidential candidate (Support for Donald Trump's 2020 presidential campaign)\n3. **\"Taiwan Question\"** - Target: Mainland China's claim that Taiwan is part of China (Mainland China's territorial claim over Taiwan)\n4. **\"False COVID Treatment\"** - Target: The claim that Chloroquine/Hydroxychloroquine being a valid COVID-19 treatment (Using chloroquine or hydroxychloroquine to treat COVID-19)\n\n## Stance Options\n- **Pro**: Supports/endorses the target\n- **Against**: Opposes/criticizes the target\n- **Neutral**: Mentions topic but no clear position\n- **Unrelated**: Tweet does not relate to any listed topics\n\n## Instructions\n- Return one classification result for each detected topic listed above\n- If the tweet relates to multiple listed topics, provide multiple results\n- If unrelated to all topics, return single result with topic \"Unrelated\" and provide 1-5 keywords describing what the tweet is about\n- Use exact topic names as listed above\n- Always use the standardized target for each topic as specified\n- Consider context, sarcasm, and implied meanings"
+}

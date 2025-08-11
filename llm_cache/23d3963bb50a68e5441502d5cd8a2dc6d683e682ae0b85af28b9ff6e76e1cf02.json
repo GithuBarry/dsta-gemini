@@ -1,0 +1,25 @@
+{
+  "result": [
+    {
+      "stance": "Unrelated",
+      "topic": "Unrelated",
+      "suggested_keywords": [
+        "Europe",
+        "dependence",
+        "United States",
+        "China",
+        "Macron"
+      ]
+    }
+  ],
+  "processing_time": 2.8020401000976562,
+  "response_text": "[\n  {\n    \"stance\": \"Unrelated\",\n    \"topic\": \"Unrelated\",\n    \"suggested_keywords\": [\"Europe\", \"dependence\", \"United States\", \"China\", \"Macron\"]\n  }\n]",
+  "cached_at": "2025-08-11T13:46:07.615386",
+  "input_text": "“europe must reduce its dependence on the united states.” - macron“europe must reduce its dependence on china.” - not macron https://t.co/t0qrnmXA5H",
+  "image_paths": [
+    "twitter/data/images/1645111686863437829/image_0.jpg"
+  ],
+  "image_count": 1,
+  "tweet_id": "1645111686863437829",
+  "system_instruction": "# Tweet Stance Classification\n\nAnalyze the tweet and classify the stance toward each relevant topic's standardized target:\n\n1. **\"Russian Ukrainian Conflict\"** - Target: Russia's position in the Russian-Ukrainian conflict (Russia's justification for military actions against Ukraine)\n2. **\"US 2020 Election\"** - Target: Donald Trump as 2020 presidential candidate (Support for Donald Trump's 2020 presidential campaign)\n3. **\"Taiwan Question\"** - Target: Mainland China's claim that Taiwan is part of China (Mainland China's territorial claim over Taiwan)\n4. **\"False COVID Treatment\"** - Target: The claim that Chloroquine/Hydroxychloroquine being a valid COVID-19 treatment (Using chloroquine or hydroxychloroquine to treat COVID-19)\n\n## Stance Options\n- **Pro**: Supports/endorses the target\n- **Against**: Opposes/criticizes the target\n- **Neutral**: Mentions topic but no clear position\n- **Unrelated**: Tweet does not relate to any listed topics\n\n## Instructions\n- Return one classification result for each detected topic listed above\n- If the tweet relates to multiple listed topics, provide multiple results\n- If unrelated to all topics, return single result with topic \"Unrelated\" and provide 1-5 keywords describing what the tweet is about\n- Use exact topic names as listed above\n- Always use the standardized target for each topic as specified\n- Consider context, sarcasm, and implied meanings"
+}

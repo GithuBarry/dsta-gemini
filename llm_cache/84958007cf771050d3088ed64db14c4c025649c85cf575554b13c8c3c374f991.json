@@ -1,0 +1,24 @@
+{
+  "result": [
+    {
+      "stance": "Unrelated",
+      "topic": "Unrelated",
+      "suggested_keywords": [
+        "New Federal State of China",
+        "Chinese Communist Party",
+        "anti-CCP",
+        "celebration"
+      ]
+    }
+  ],
+  "processing_time": 3.212251901626587,
+  "response_text": "[\n  {\n    \"stance\": \"Unrelated\",\n    \"topic\": \"Unrelated\",\n    \"suggested_keywords\": [\"New Federal State of China\", \"Chinese Communist Party\", \"anti-CCP\", \"celebration\"]\n  }\n]",
+  "cached_at": "2025-08-11T13:45:38.281549",
+  "input_text": "As for the money we spent on the delicious food and fancy drinks enjoyed by the fellow fighters at the celebration of the 2nd anniversary of the New Federal State of China, not a dime came from Communist China. This shows that we can live much better without the# CCP! I was able https://t.co/97aMxjJJCK",
+  "image_paths": [
+    "twitter/data/images/1537554060630433797/image_0.jpg"
+  ],
+  "image_count": 1,
+  "tweet_id": "1537554060630433797",
+  "system_instruction": "# Tweet Stance Classification\n\nAnalyze the tweet and classify the stance toward each relevant topic's standardized target:\n\n1. **\"Russian Ukrainian Conflict\"** - Target: Russia's position in the Russian-Ukrainian conflict (Russia's justification for military actions against Ukraine)\n2. **\"US 2020 Election\"** - Target: Donald Trump as 2020 presidential candidate (Support for Donald Trump's 2020 presidential campaign)\n3. **\"Taiwan Question\"** - Target: Mainland China's claim that Taiwan is part of China (Mainland China's territorial claim over Taiwan)\n4. **\"False COVID Treatment\"** - Target: The claim that Chloroquine/Hydroxychloroquine being a valid COVID-19 treatment (Using chloroquine or hydroxychloroquine to treat COVID-19)\n\n## Stance Options\n- **Pro**: Supports/endorses the target\n- **Against**: Opposes/criticizes the target\n- **Neutral**: Mentions topic but no clear position\n- **Unrelated**: Tweet does not relate to any listed topics\n\n## Instructions\n- Return one classification result for each detected topic listed above\n- If the tweet relates to multiple listed topics, provide multiple results\n- If unrelated to all topics, return single result with topic \"Unrelated\" and provide 1-5 keywords describing what the tweet is about\n- Use exact topic names as listed above\n- Always use the standardized target for each topic as specified\n- Consider context, sarcasm, and implied meanings"
+}
